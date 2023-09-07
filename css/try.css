@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Tahoma',Segoe UI , Geneva, Verdana, sans-serif
+}
+
+:root{
+    /* ====== Color ====== */
+    --textColor: black;
+    --bgColor: white;
+    --btnColor: orange;
+    --colorGray: gray;
+
+    /* ======== width ====== */
+
+    --lg: 90%;
+    --md:85%;
+    --sm: 90%;
+}
+.container{
+    width: var(--lg);
+    margin: 0 auto;
+}
+section{
+    margin-top: 4rem;
+}
+section>h2{
+    text-align: center;
+}
+
+nav{
+    background-color: var(--textColor);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bgColor);
+    height: 100px;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--bgColor);
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+.grid-card{
+    padding: 1.5rem 1rem;
+    background-color: var(--colorGray);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.grid-card h2{
+    color: var(--bgColor);
+}
+.grid-card p{
+    color: khaki;
+}
+.grid-card:nth-child(3){
+    background-color: rgb(19, 72, 72);
+    position: relative;
+}
+.card-p{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(252, 247, 247);
+    right: 0;
+    margin-right: 1rem;
+    margin-top: -3rem;
+    border-radius: 50%;
+}
+
+@media screen AND (max-width: 1024px) {
+    .container{
+        width: var(--md);
+        margin: 0 auto;
+    }
+    .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+}
+@media screen AND (max-width: 600px) {
+    .container{
+        width: var(--md);
+        margin: 0 auto;
+    }
+    .grid-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+}
